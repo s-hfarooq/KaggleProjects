@@ -1,1 +1,3 @@
-#TEST
+This doesn't really work...
+
+Download data from [here](https://www.kaggle.com/c/LANL-Earthquake-Prediction/data)
