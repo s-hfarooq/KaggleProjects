@@ -9,7 +9,7 @@ from sklearn.tree import DecisionTreeRegressor
 
 
 # Path of the file to read
-iowa_file_path = '../input/home-data-for-ml-course/train.csv'
+iowa_file_path = 'train.csv'
 
 home_data = pd.read_csv(iowa_file_path)
 # Create target object and call it y
@@ -37,13 +37,6 @@ iowa_model.fit(train_X, train_y)
 val_predictions = iowa_model.predict(val_X)
 val_mae = mean_absolute_error(val_predictions, val_y)
 print("Validation MAE for best value of max_leaf_nodes: {:,.0f}".format(val_mae))
-
-
-# Set up code checking
-from learntools.core import binder
-binder.bind(globals())
-from learntools.machine_learning.ex6 import *
-print("\nSetup complete")
 
 
 # Step 1: Use a random forst

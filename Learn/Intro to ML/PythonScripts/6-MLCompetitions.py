@@ -7,12 +7,10 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
-from learntools.core import *
-
 
 
 # Path of the file to read. We changed the directory structure to simplify submitting to a competition
-iowa_file_path = '../input/train.csv'
+iowa_file_path = 'train.csv'
 
 home_data = pd.read_csv(iowa_file_path)
 # Create target object and call it y
@@ -60,7 +58,7 @@ rf_model_on_full_data.fit(X, y)
 
 # Make predictions
 # path to file you will use for predictions
-test_data_path = '../input/test.csv'
+test_data_path = 'test.csv'
 
 # read test data file using pandas
 test_data = pd.read_csv(test_data_path)

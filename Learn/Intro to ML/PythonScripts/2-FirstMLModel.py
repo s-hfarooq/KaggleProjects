@@ -1,6 +1,6 @@
 import pandas as pd
 
-main_file_path = '../input/train.csv' # this is the path to the Iowa data that you will use
+main_file_path = 'train.csv' # this is the path to the Iowa data that you will use
 data = pd.read_csv(main_file_path)
 
 # The cod below will help you see how output appears when you run a code block

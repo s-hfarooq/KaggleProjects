@@ -6,7 +6,7 @@ import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 
 # Path of the file to read
-iowa_file_path = '../input/home-data-for-ml-course/train.csv'
+iowa_file_path = 'train.csv'
 
 home_data = pd.read_csv(iowa_file_path)
 y = home_data.SalePrice
@@ -20,12 +20,6 @@ iowa_model.fit(X, y)
 
 print("First in-sample predictions:", iowa_model.predict(X.head()))
 print("Actual target values for those homes:", y.head().tolist())
-
-# Set up code checking
-from learntools.core import binder
-binder.bind(globals())
-from learntools.machine_learning.ex4 import *
-print("Setup Complete")
 
 
 # Step 1: Split data
@@ -53,9 +47,9 @@ iowa_model.fit(train_X, train_y)
 val_predictions = iowa_model.predict(val_X)
 
 # print the top few validation predictions
-print(val_predictions[:10])
+print("\n\nFirst few validation predictions: \n", val_predictions[:10])
 # print the top few actual prices from validation data
-print(val_y[:10])
+print("\n\nFirst few actual prices: \n", val_y[:10])
 
 
 # Step 4: Calculate mean absolute error in validataion data
@@ -63,4 +57,4 @@ from sklearn.metrics import mean_absolute_error
 val_mae = mean_absolute_error(val_predictions, val_y)
 
 # uncomment following line to see the validation_mae
-print(val_mae)
+print("\nmean absolute error: ", val_mae)
